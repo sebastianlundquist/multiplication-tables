@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
             timesTableContent.add(j + " * " + currentNumber + " = " + (j * currentNumber));
         }
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, timesTableContent);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, timesTableContent);
         timesTablesListView.setAdapter(arrayAdapter);
     }
 
@@ -53,18 +53,13 @@ public class MainActivity extends AppCompatActivity {
                     currentNumber = i;
                 }
                 generateTimesTable(currentNumber);
-
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
+            public void onStartTrackingTouch(SeekBar seekBar) { }
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
+            public void onStopTrackingTouch(SeekBar seekBar) { }
         });
     }
 }
